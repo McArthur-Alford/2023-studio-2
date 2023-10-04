@@ -48,8 +48,11 @@ public class MapGameArea extends GameArea{
     private GameAreaConfig mapConfig = null;
     private static final Logger logger = LoggerFactory.getLogger(MapGameArea.class);
     private final TerrainFactory terrainFactory;
+
+    private static final GridPoint2 CAR_SPAWN = new GridPoint2(40, 40);
     private final GdxGame game;
     private int playerLives;
+    private Entity car;
     private boolean validLoad = true;
     private static List<Entity> itemsOnMap = new ArrayList<>();
     private String thing;
@@ -86,6 +89,7 @@ public class MapGameArea extends GameArea{
         spawnTerrain();
         spawnEnvironment();
         spawnExtractors();
+        car = spawnCar();
         spawnShip();
         player = spawnPlayer();
         companion = spawnCompanion();
@@ -158,7 +162,12 @@ public class MapGameArea extends GameArea{
             spawnEntityAt(portal, portalConfig.position, false, false);
         }
     }
-
+    private Entity spawnCar() {
+        if (mapConfig.areaEntityConfig == null) return null;
+        Entity newCar = CarFactory.createCar();
+        spawnEntityAt(newCar,CAR_SPAWN, true, true);
+        return newCar;
+    }
     private void spawnEnvironmentDamage() {
         if (mapConfig.areaEntityConfig == null) return;
 
@@ -489,6 +498,8 @@ public class MapGameArea extends GameArea{
         }
 
     }
+
+
 
     private void spawnAstronaut() {
         if (mapConfig.areaEntityConfig == null) return;
