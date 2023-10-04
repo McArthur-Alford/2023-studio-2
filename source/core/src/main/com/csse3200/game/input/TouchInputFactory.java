@@ -1,6 +1,7 @@
 package com.csse3200.game.input;
 
 import com.csse3200.game.components.Companion.TouchCompanionInputComponent;
+import com.csse3200.game.components.car.KeyboardCarInputComponent;
 import com.csse3200.game.components.player.TouchPlayerInputComponent;
 import com.csse3200.game.components.ships.KeyboardShipInputComponent;
 import com.csse3200.game.ui.terminal.KeyboardTerminalInputComponent;
@@ -71,5 +72,10 @@ public class TouchInputFactory extends InputFactory{
   public InputComponent createForTerminal() {
     logger.debug("Creating terminal input handler");
     return new TouchTerminalInputComponent();
+  }
+
+  public InputComponent createForCar() {
+    logger.debug("Creating car input handler");
+    return new KeyboardCarInputComponent();
   }
 }

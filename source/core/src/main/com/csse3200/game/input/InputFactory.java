@@ -78,6 +78,8 @@ public abstract class InputFactory {
    * @return Terminal input handler
    */
   public abstract InputComponent createForTerminal();
+
+  public abstract  InputComponent createForCar();
 }
 
 
