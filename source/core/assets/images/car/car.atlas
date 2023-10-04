@@ -1,0 +1,68 @@
+car.png
+size: 410, 924
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+default
+  xy: 0, 462
+  index: 0
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  rotate: false
+car_movement_backward
+  xy: 0, 0
+  index: 0
+ size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  rotate: false
+car_backward
+  xy: 328, 0
+  index: 0
+ size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  rotate: false
+car_facing_left
+  xy: 0, 231
+  index: 0
+ size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  rotate: false
+car_left
+  xy: 328, 231
+  index: 0
+  size: 80, 80
+   orig: 80, 80
+  offset: 0, 0
+  rotate: false
+car_facing_right
+  xy: 0, 462
+  index: 0
+   size: 80, 80
+    orig: 80, 80
+  offset: 0, 0
+  rotate: false
+car_right
+  xy: 328, 462
+  index: 0
+ size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  rotate: false
+car_movement_upward
+  xy: 0, 693
+  index: 0
+ size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  rotate: false
+car_upward
+  xy: 328, 693
+  index: 0
+ size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  rotate: false
